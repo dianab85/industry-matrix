@@ -1,0 +1,36 @@
+#matrix-area-1 {
+    top:179px;
+    left:74px;
+    width: 293px;
+    height:212px;
+    z-index:1;
+    position: absolute;
+    overflow:inherit;
+
+    line {
+        display: block;
+    }
+
+    @include respond(tab-port){
+        top:140px;
+        left:123px;
+        width:484px;        
+    }
+
+    @include respond(desktop){
+        top:142px;
+        left:148px;
+        width: 595px;       
+    }    
+}
+#industry-matrix.allSelected #matrix-area-1,.industry-results_single #matrix-area-1 {
+    height:220px;
+    top:177px;
+    @include respond(tab-port){
+        top:134px;
+    }
+    @include respond(desktop){
+        top:136px;       
+    }   
+}
+

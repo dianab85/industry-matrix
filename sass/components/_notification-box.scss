@@ -1,0 +1,16 @@
+.industry-matrix--message-box {
+    width:100%;
+    display: inline-block;
+    background: #f1f1f1;
+    border-radius: 3px;
+    padding: 5px 25px;
+    margin-right: 20px;
+    vertical-align: bottom;
+    margin-bottom:0;
+    border: 1px solid #af1926;
+
+    @include respond(tab-port){
+        width: 535px;
+    }  
+      
+}

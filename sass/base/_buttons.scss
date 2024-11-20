@@ -1,0 +1,226 @@
+.btn-activity {
+    background:$exeter-kp-red;
+    color:$color-white;
+    border:none;
+    padding:5px 15px;
+    margin: 10px 0 0 0;
+    border-radius: 20px;
+    font-size:14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+
+    &:hover, &:active, &:focus {
+        color:$color-white;
+        text-decoration: none;
+    }
+
+}
+
+.industry-results_placeholder {
+    background: #fff;
+    .tab-links {
+        border-radius: 2px;
+        color: $color-white;
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 400;
+        margin-bottom: 10px;
+        padding: 1% 3.5%;
+        text-align: center;
+        transition: box-shadow 300ms ease-in-out;
+        vertical-align: top;
+        word-wrap: break-word;
+
+        &:hover {
+            cursor: default;
+            text-decoration: none;
+        }
+
+        &:not(:last-child){
+            margin-right:4px;
+        }
+        &:last-child {
+            margin-left:11px;
+            position: relative;
+            &:after {
+                position: absolute;
+                content:'';
+                left:-10px;
+                top:0;
+                width: 2px;
+                background: #999;
+                height:30px;
+
+                @include respond(tab-port){
+
+                    height:35px;
+                }
+
+                @include respond(desktop){
+                    height:39px;
+                }
+            }
+        }
+
+
+        @include respond(mobile){
+            padding: 1.25% 3%;
+            font-size:14px;
+        }
+        @include respond(tab-port){
+            padding: 0.7% 2%;
+            font-size:18px;
+        }
+
+        &--red {
+            border: 2px solid transparentize($exeter-kp-red, 0.75);
+            background:transparentize($exeter-kp-red, 0.75);
+            color: $color-white;
+        }
+        &--blue {background:transparentize($exeter-blue, 0.75);
+            border: 2px solid transparentize($exeter-blue, 0.75);
+        }
+        &--green {background:transparentize($exeter-green, 0.75);
+            border: 2px solid transparentize($exeter-green, 0.75);
+        }
+        &--orange {background:transparentize($exeter-orange, 0.75);
+            border: 2px solid transparentize($exeter-orange, 0.75);
+        }
+        &--orange-acc {background:transparentize($exeter-acc-orange, 0.75);
+            border: 2px solid transparentize($exeter-acc-orange, 0.75);
+        }
+    }
+}
+
+.industry-matrix {
+    .tab-links {
+        display: inline-block;
+        font-size:12px;
+        word-wrap: break-word;
+        vertical-align: top;
+        color:$color-white;
+        text-align: center;
+        padding: 1% 3.5%;
+        margin-bottom: 10px;
+        border-radius: 2px;
+        font-weight: 400;
+        transition: box-shadow 300ms ease-in-out;
+
+        &:not(:last-child){
+            margin-right:4px;
+        }
+        &:last-child {
+            margin-left:11px;
+            position: relative;
+            &:after {
+                position: absolute;
+                content:'';
+                left:-10px;
+                top:0;
+                width: 2px;
+                background: #333;
+                height:30px;
+
+                @include respond(tab-port){
+
+                    height:35px;
+                }
+
+                @include respond(desktop){
+                    height:39px;
+                }
+            }
+        }
+
+
+        @include respond(mobile){
+            padding: 1.25% 3%;
+            font-size:14px;
+        }
+        @include respond(tab-port){
+            padding: 0.7% 2%;
+            font-size:18px;
+        }
+
+        &:hover, &:active, &:focus, &.active {
+            text-decoration: none;
+        }
+
+        &--red {
+            border: 2px solid $exeter-kp-red;
+            background:$exeter-kp-red;
+            color: $color-white;
+            &.active,&:active,&:focus {
+                transform:none;
+                color:$exeter-kp-red;
+                background:$color-white;
+            }
+
+            &.active, &:hover {
+                box-shadow: 1px 1px 4px $exeter-kp-red, -1px -1px 4px $exeter-kp-red;
+            }
+        }
+        &--blue {background:$exeter-blue;
+            border: 2px solid $exeter-blue;
+            &.active,&:active, &:focus {
+                background: #fff;
+                color: $exeter-blue;
+            }
+            &.active, &:hover {
+                box-shadow: 1px 1px 4px $exeter-blue, -1px -1px 4px $exeter-blue;
+            }
+        }
+        &--green {background:$exeter-green;
+            border: 2px solid $exeter-green;
+            &.active,&:active, &:focus {
+                background: #fff;
+                color: $exeter-green;
+            }
+            &.active, &:hover {
+                box-shadow: 1px 1px 4px $exeter-green, -1px -1px 4px $exeter-green;
+            }
+        }
+        &--orange {background:$exeter-orange;
+            border: 2px solid $exeter-orange;
+            &.active, &:active, &:focus {
+                background: #fff;
+                color: $exeter-orange;
+            }
+            &.active,&:hover {
+                box-shadow: 1px 1px 4px $exeter-orange, -1px -1px 4px $exeter-orange;
+            }
+        }
+        &--orange-acc {background:$exeter-acc-orange;
+            border: 2px solid $exeter-acc-orange;
+            &.active,&:active, &:focus {
+                background: #fff;
+                color: $exeter-acc-orange;
+            }
+            &.active,&:hover {
+                box-shadow: 1px 1px 4px $exeter-acc-orange, -1px -1px 4px $exeter-acc-orange;
+            }
+        }
+    }
+}
+
+#graph-nav {
+    display: none;
+    position: relative;
+    z-index: 1000;
+
+    a {
+        background: #004C9C;
+        border-radius: 4px;
+        color: #fff;
+        display: inline-block;
+        padding: 5px 15px;
+        font-size: 16px;
+
+        &:first-of-type {
+            margin-right: 10px;
+        }
+    }
+}
